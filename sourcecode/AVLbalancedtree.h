@@ -1,5 +1,9 @@
+#ifndef AVLBALANCEDTREE_H
+#define AVLBALANCEDTREE_H
+
 #include <iostream>
 #include "queueusinglinkedlist.h"
+#include "stacksinglelinkedlist.h"
 
 using namespace std;
 
@@ -9,7 +13,7 @@ template <typename T> class avlbalancedbts
 private:
 
 	/* node */
-	template <typename T>class Node
+	template <typename U>class Node
 	{
 	public:
 
@@ -20,7 +24,7 @@ private:
 		int bf; //balance factor
 
 		//constructor
-		Node<T>() :left(nullptr), right(nullptr) 
+		Node() :left(nullptr), right(nullptr) 
 		{
 		}
 	};
@@ -630,3 +634,5 @@ public:
 		bts1->print_levelordertraversal();
 	}
 };
+
+#endif

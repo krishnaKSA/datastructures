@@ -9,7 +9,7 @@ private:
 	int m_size;	 //size of the list
 
 	//data structure Node class
-	template <typename T> class Node
+	template <typename U> class Node
 	{
 	public:
 		T data;

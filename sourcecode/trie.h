@@ -205,6 +205,7 @@ public:
 		cout << "search word catride = " << m_trie->search("catride") << endl;
 		m_trie->insert("cab");
 		m_trie->insert("rat");
+
 		cout << "search word ratt = " << m_trie->search("ratt") << endl;
 		m_trie->insert("ratt");
 		cout << "search word ratt = " << m_trie->search("ratt") << endl;

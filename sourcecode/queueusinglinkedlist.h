@@ -2,6 +2,7 @@
 #define _QUEUE_USING_LINKEDLIST_H
 
 #include <iostream>
+#include "linkedlist.h"
 
 using namespace std;
 

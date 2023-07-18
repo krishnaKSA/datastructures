@@ -1,3 +1,6 @@
+#ifndef _LINKEDLIST_
+#define _LINKEDLIST_
+
 #include <iostream>
 using namespace std;
 
@@ -5,16 +8,16 @@ using namespace std;
 template <typename T> class linkedList
 {
 private:
-    /* create node class */
-	template <typename T> class Node
+	/* create node class */
+	template <typename U> class Node
 	{
-		public:
-			T data; //data
-			Node<T>* next;	//next pointer
-			//constructor
-			Node() :next(nullptr) 
-	        {
-			} 
+	public:
+		T data; //data
+		Node<T>* next;	//next pointer
+		//constructor
+		Node() :next(nullptr)
+		{
+		}
 	};
 	int m_size; //size of the linked list
 	Node<T>* m_head; //head pointer
@@ -31,52 +34,52 @@ private:
 	}
 
 public:
-    
+
 	//constructor
-	linkedList():m_head(nullptr),m_tail(nullptr),m_size(0) 
-	{		
+	linkedList() :m_head(nullptr), m_tail(nullptr), m_size(0)
+	{
 	}
-	
+
 	//get size of the linked list
 	int getsize()
 	{
 		return m_size;
 	}
-    
+
 	//check whether linked list is empty
 	bool isEmpty()
 	{
-		return (0 == m_size)?true:false;
+		return (0 == m_size) ? true : false;
 	}
-    
+
 	//Add elements to the list
 	void add(T elem)
 	{
 		addlast(elem);
 	}
-    
+
 	//Add element in the first node(head node)
 	void addfirst(T elem)
 	{
 		Node<T>* new_node = new Node<T>();
 		new_node->data = elem;
 		if (nullptr == m_head)
-		{      
+		{
 			//If head node is nullptr, assign newnode as head node
 			m_head = new_node;
 			m_tail = m_head;
 		}
 		else
-		{   
+		{
 			//If head is not empty, assign the new node next pointer is head node, and
 			//new node as head node.
 			new_node->next = m_head;
 			m_head = new_node;
-	
+
 		}
 		increaseListSize(); //increase the size of the list
 	}
-    
+
 	//Add element at end of the list
 	void addlast(T elem)
 	{
@@ -85,14 +88,14 @@ public:
 		{
 			addfirst(elem);
 		}
-		else 
+		else
 		{
 			//create new node
 			Node<T>* new_node = new Node<T>();
 			new_node->data = elem;
 
 			Node<T>* curr_node = m_head;
-            //Travese till the last node
+			//Travese till the last node
 			while (nullptr != curr_node->next)
 			{
 				curr_node = curr_node->next;
@@ -103,7 +106,7 @@ public:
 			increaseListSize(); //increase the size of the list
 		}
 	}
-    
+
 	//add the element in the specific location
 	void addat(int pos, T elem)
 	{
@@ -119,7 +122,7 @@ public:
 			addfirst(elem);
 		}
 		else if (pos == m_size)
-		{      
+		{
 			//if the position value is size of the list, then add the element at end of the list
 			addlast(elem);
 		}
@@ -131,7 +134,7 @@ public:
 
 			Node<T>* curr_node = m_head;
 			int index = 1;
-                        //iterate till the position
+			//iterate till the position
 			while (index != (pos - 1))
 			{
 				curr_node = curr_node->next;
@@ -142,7 +145,7 @@ public:
 			increaseListSize();
 		}
 	}
-    
+
 	//get the first element of the linked list
 	T peekfirst()
 	{
@@ -154,7 +157,7 @@ public:
 		//return the first element
 		return m_head->data;
 	}
-    
+
 	//get the last element of the linked list
 	T peeklast()
 	{
@@ -166,7 +169,7 @@ public:
 		//return the last element
 		return m_tail->data;
 	}
-    
+
 	//remove the first node
 	void removefirst()
 	{
@@ -188,7 +191,7 @@ public:
 			}
 		}
 	}
-    
+
 	//remove the last node
 	void removelast()
 	{
@@ -218,14 +221,14 @@ public:
 
 		}
 	}
-    
+
 	//remove at the given position
 	void removeat(int pos)
 	{
 		if (isEmpty())
 		{
 			throw runtime_error("Empty list");
-	        }//validate the input parameter
+		}//validate the input parameter
 		else if ((0 >= pos) || (pos > m_size))
 		{
 			throw runtime_error("invalid position");
@@ -267,7 +270,7 @@ public:
 			}
 		}
 	}
-    
+
 	//Utility function to print the list
 	void printlist()
 	{
@@ -284,7 +287,7 @@ public:
 };
 
 template <typename T> class linkedListest
-{	
+{
 public:
 	void testexecution()
 	{
@@ -294,7 +297,7 @@ public:
 		list->addfirst(10);
 		list->addlast(30);
 		list->addat(3, 40);
-		
+
 		list->printlist();
 		cout << "peek first  " << list->peekfirst() << endl;
 		cout << "peek last  " << list->peeklast() << endl;
@@ -319,3 +322,4 @@ public:
 };
 
 
+#endif

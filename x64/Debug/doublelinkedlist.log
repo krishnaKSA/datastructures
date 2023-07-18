@@ -1,18 +1,4 @@
 ﻿  doublelinkedlist.cpp
   Source.cpp
-C:\Users\KrKrishnasam\OneDrive - HARMAN\KRISHNAVENI\PRACTICSE\SELF\GitHub\datastructures\binaryheap.h(177,9): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\KrKrishnasam\OneDrive - HARMAN\KRISHNAVENI\PRACTICSE\SELF\GitHub\datastructures\binaryheap.h(175,7): message : while compiling class template member function 'bool binaryheap<int>::isHeap(void)'
-C:\Users\KrKrishnasam\OneDrive - HARMAN\KRISHNAVENI\PRACTICSE\SELF\GitHub\datastructures\binaryheap.h(213,15): message : see the first reference to 'binaryheap<int>::isHeap' in 'testbinaryheap<int>::testexecution'
-C:\Users\KrKrishnasam\OneDrive - HARMAN\KRISHNAVENI\PRACTICSE\SELF\GitHub\datastructures\Source.cpp(37,25): message : see the first reference to 'testbinaryheap<int>::testexecution' in 'main'
-C:\Users\KrKrishnasam\OneDrive - HARMAN\KRISHNAVENI\PRACTICSE\SELF\GitHub\datastructures\binaryheap.h(203,1): message : see reference to class template instantiation 'binaryheap<int>' being compiled
-C:\Users\KrKrishnasam\OneDrive - HARMAN\KRISHNAVENI\PRACTICSE\SELF\GitHub\datastructures\binaryheap.h(231,2): message : see reference to class template instantiation 'testbinaryheap<T>' being compiled
-C:\Users\KrKrishnasam\OneDrive - HARMAN\KRISHNAVENI\PRACTICSE\SELF\GitHub\datastructures\binaryheap.h(82,27): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\KrKrishnasam\OneDrive - HARMAN\KRISHNAVENI\PRACTICSE\SELF\GitHub\datastructures\binaryheap.h(74,7): message : while compiling class template member function 'void binaryheap<int>::remove(T)'
-          with
-          [
-              T=int
-          ]
-C:\Users\KrKrishnasam\OneDrive - HARMAN\KRISHNAVENI\PRACTICSE\SELF\GitHub\datastructures\binaryheap.h(212,15): message : see the first reference to 'binaryheap<int>::remove' in 'testbinaryheap<int>::testexecution'
-C:\Users\KrKrishnasam\OneDrive - HARMAN\KRISHNAVENI\PRACTICSE\SELF\GitHub\datastructures\Source.cpp(37,25): message : see the first reference to 'testbinaryheap<int>::testexecution' in 'main'
   Generating Code...
   doublelinkedlist.vcxproj -> C:\Users\KrKrishnasam\OneDrive - HARMAN\KRISHNAVENI\PRACTICSE\SELF\GitHub\datastructures\x64\Debug\doublelinkedlist.exe

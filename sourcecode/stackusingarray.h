@@ -26,7 +26,7 @@ private:
 
 public:
 	//constructor
-	stackarr() :size(0),index(-1) 
+	stackarr() :size(MAX_ARRAY_SIZE),index(-1)
 	{
 	}
 

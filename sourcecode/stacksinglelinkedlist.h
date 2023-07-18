@@ -1,6 +1,8 @@
 #ifndef _STACK_SINGLE_LINKEDLIST_H
 #define _STACK_SINGLE_LINKEDLIST_H
 
+#include "linkedList.h"
+
 /* Stack class using linked list */
 template <typename T> class liststack
 {
@@ -27,7 +29,7 @@ public:
 		if (stack->isEmpty())
 		{
 			cout << "empty list" << endl;
-			return -1;
+			//return -1;
 		}
 		//get the last element of the linked list
 		return stack->peeklast();

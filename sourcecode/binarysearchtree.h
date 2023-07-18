@@ -1,5 +1,9 @@
+#ifndef BINARYSEARCHTREE_H
+#define BINARYSEARCHTREE_H
+
 #include <iostream>
 #include "queueusinglinkedlist.h"
+#include "stacksinglelinkedlist.h"
 
 using namespace std;
 
@@ -8,7 +12,7 @@ template <typename T> class binarysearchtree
 {
 private:
 	//Node class
-	template <typename T>class Node
+	template <typename U> class Node
 	{
 	public:
 		Node<T>* left; //left tree
@@ -62,8 +66,6 @@ public:
 				node->right = addrecursive(node->right, elem);
 			}
 		}
-		//find balance factor of the node
-		findbalancefactor(node); 
 		return node;
 	}
 
@@ -164,7 +166,7 @@ public:
 	{
 		if (root == nullptr)
 		{
-			cout << "no element in BTS" << endl;
+			cout << "no element in bst" << endl;
 			return;
 		}
 		else
@@ -174,7 +176,7 @@ public:
 			{
 				root = remove(root, elem);
 			}
-			else cout << "element not found in BTS" << endl;
+			else cout << "element not found in bst" << endl;
 		}
 	}
 
@@ -432,43 +434,45 @@ template <typename T> class testbinarysearchtree
 public:
 	void testexecution()
 	{
-		binarysearchtree<int>* bts = new binarysearchtree<int>();
+		binarysearchtree<int>* bst = new binarysearchtree<int>();
 
-		bts->add(10);
-		bts->add(9);
-		bts->add(7);
-		bts->add(16);
-		bts->add(18);
-		bts->add(15);
-		bts->add(5);
-		bts->add(40);
-		bts->add(20);
+		bst->add(10);
+		bst->add(9);
+		bst->add(7);
+		bst->add(16);
+		bst->add(18);
+		bst->add(15);
+		bst->add(5);
+		bst->add(40);
+		bst->add(20);
 
-		bts->print_levelordertraversal();
-		bts->print_inordertraversal();
-		bts->print_preordertraversal();
-		bts->print_levelordertraversal();
+		bst->print_levelordertraversal();
+		bst->print_inordertraversal();
+		bst->print_preordertraversal();
+		bst->print_levelordertraversal();
 
-		cout << "height of the BTS === " << bts->height() << endl;
+		cout << "height of the bst === " << bst->height() << endl;
 
-		bts->remove(5);
-		bts->remove(9);
-		bts->remove(18);
-		bts->remove(0);
-		bts->print_levelordertraversal();
+		bst->remove(5);
+		bst->remove(9);
+		bst->remove(18);
+		bst->remove(0);
+		bst->print_levelordertraversal();
 
 		cout << endl << endl;
-		binarysearchtree<int>* bts1 = new binarysearchtree<int>();
+		binarysearchtree<int>* bst1 = new binarysearchtree<int>();
 
-		cout << "bts1 height " << bts1->height() << endl;
-		bts1->addrecursive(10);
-		cout << "bts1 height " << bts1->height() << endl;
-		bts1->addrecursive(5);
-		cout << "bts1 height " << bts1->height() << endl;
-		bts1->addrecursive(19);
-		cout << "bts1 height " << bts1->height() << endl;
-		bts1->addrecursive(23);
-		bts1->addrecursive(7);
-		bts1->print_levelordertraversal();
+		cout << "bst1 height " << bst1->height() << endl;
+		bst1->addrecursive(10);
+		cout << "bst1 height " << bst1->height() << endl;
+		bst1->addrecursive(5);
+		cout << "bst1 height " << bst1->height() << endl;
+		bst1->addrecursive(19);
+		cout << "bst1 height " << bst1->height() << endl;
+		bst1->addrecursive(23);
+		bst1->addrecursive(7);
+		bst1->print_levelordertraversal();
 	}
 };
+
+#endif

@@ -18,6 +18,25 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="multithreading.h" />
+    <ClInclude Include="producerconsumer.h" />
+    <ClInclude Include="sourcecode\AVLbalancedtree.h" />
+    <ClInclude Include="sourcecode\binaryheap.h" />
+    <ClInclude Include="sourcecode\binarysearchtree.h" />
+    <ClInclude Include="sourcecode\circularbuffer.h" />
+    <ClInclude Include="sourcecode\doublelinkedlist.h" />
+    <ClInclude Include="sourcecode\linkedList.h" />
+    <ClInclude Include="sourcecode\queueusingdynamicarray.h" />
+    <ClInclude Include="sourcecode\queueusinglinkedlist.h" />
+    <ClInclude Include="sourcecode\stacksinglelinkedlist.h" />
+    <ClInclude Include="sourcecode\stackusingarray.h" />
+    <ClInclude Include="sourcecode\trie.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="sourcecode\doublelinkedlist.cpp" />
+    <ClCompile Include="sourcecode\Source.cpp" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
@@ -138,22 +157,6 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClCompile Include="doublelinkedlist.cpp" />
-    <ClCompile Include="Source.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="AVLbalancedtree.h" />
-    <ClInclude Include="binaryheap.h" />
-    <ClInclude Include="binarysearchtree.h" />
-    <ClInclude Include="doublelinkedlist.h" />
-    <ClInclude Include="queueusingdynamicarray.h" />
-    <ClInclude Include="queueusinglinkedlist.h" />
-    <ClInclude Include="linkedList.h" />
-    <ClInclude Include="stacksinglelinkedlist.h" />
-    <ClInclude Include="stackusingarray.h" />
-    <ClInclude Include="trie.h" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
